@@ -1,9 +1,10 @@
 <template id="facebook-button">
     <div class="reg-facebook-wrapper">
-        <a href="/people/auth/facebook?locale=en" class="reg-facebook">{{ text }}</a>
+        <a href="https://www.wedio.com/en" target="blank" class="reg-facebook">{{ text }}
         <div class="facebook-container"> 
             <img src="../../assets/facebook.svg" class="facebook-img">
         </div>
+        </a>
     </div>
 </template>
 
@@ -40,6 +41,7 @@ data: function() {
             font-size: 14px;
             color: #fff;
             text-decoration: none;
+            
         }
 
         .facebook-container {
