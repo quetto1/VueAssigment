@@ -18,7 +18,6 @@ data: function() {
 
 <style>
 .reg-button-black{
-
     background-color: transparent;
     color: #fff;
     transition-duration: .3s;

@@ -5,6 +5,7 @@ import RegButtonGreen  from './components/buttons/RegisterButtonGreen.vue'
 import SignInButtonGreen from './components/buttons/SignInButtonGreen.vue'
 import RegButtonBlack  from './components/buttons/RegisterButtonBlack.vue'
 import SignInButtonBlack from './components/buttons/SignInButtonBlack.vue'
+import RegisterWithFacebook from './components/buttons/RegisterWithFacebook.vue'
 
 
 // import RegButton from './components/buttons/RegButton.vue'
@@ -16,7 +17,7 @@ Vue.component('SignInButtonGreen',SignInButtonGreen)
 Vue.component('RegisterButtonBlack',RegButtonBlack);
 Vue.component('SignInButtonBlack',SignInButtonBlack)
 
-
+Vue.component('Facebook-button', RegisterWithFacebook)
 //Test Example 
 Vue.component('app-server-status', Home);
 
