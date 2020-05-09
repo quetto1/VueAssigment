@@ -1,6 +1,6 @@
 <template id="button-black">
 <div>
-    <button class="reg-button-black">{{ text }}</button>
+    <button @click="navigateToSignIn" class="reg-button-black">{{ text }}</button>
 </div>
 </template>
 
@@ -12,6 +12,13 @@ data: function() {
             text: 'sign in'
         }
     },
+    methods: {
+        navigateToSignIn(event) {
+            event.preventDefault();
+            window.location.href = '/';
+        }
+    }
+    
 }
 
 </script>

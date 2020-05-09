@@ -15,9 +15,8 @@
                 </p>
             </div>
             <div class="buttons-wrapper">
-                <SignInButtonBlack href="index2.html"></SignInButtonBlack>
+                <SignInButtonBlack href="/sign-in"></SignInButtonBlack>
                 <RegisterButtonGreen class="RegisterButtonGreen "></RegisterButtonGreen>
-
             </div>
 
             </form>
@@ -30,8 +29,10 @@
 export default {
     data: function() {
         return{
-            // status: 'Critical'
         }
+    },
+    mounted(){
+        document.title = 'Register on Wedio — Become a Part of Community For Free'
     }
 }
 </script>
@@ -55,7 +56,7 @@ export default {
 }
 .header-title{
 width: max-content;
-font-size: 30px;
+font-size: 28px;
 margin-bottom: 12px;
 font-weight: 900;
 
@@ -118,6 +119,7 @@ flex-direction:row;
 }
 @media screen and (max-width: 480px){
 .form-wrapper{
+    margin-top:30px;
     width: 80%;
     
 }
@@ -130,7 +132,5 @@ flex-direction:row;
 }
 
 }
-
-
 
 </style>

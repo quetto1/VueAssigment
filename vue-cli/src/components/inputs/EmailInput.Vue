@@ -57,7 +57,7 @@ input{
     position: absolute; 
 }
 .error{
-    // display:none;
+    display:none;
     height:30px;
     margin-top:5px;
     font-size: 12px;

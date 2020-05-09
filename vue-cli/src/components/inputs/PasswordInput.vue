@@ -1,7 +1,7 @@
 <template id="input-password">
    <div class="input-wrapper">
         <input  class="input-password" type="password" pattern="" >
-        <label class="label-username">{{ text }}</label>
+        <label class="label-password">{{ text }}</label>
         <span>
             <img  src="../../assets/eyeopen.svg" class="eye-img">
         </span>
@@ -31,9 +31,11 @@ data: function() {
     display: block;
 }
 span{
+    cursor:pointer;
     font-style: inherit;
     font-weight: inherit;
-    margin-left: 92%;
+    margin-left: 90%;
+    z-index:1;
 }
 
 .label-password{

@@ -6,16 +6,18 @@
             <h1 class="header-title">SIGN IN TO WEDIO —</h1>
             <p class="discription">the fastest-growing European community of creators</p>
             <Facebook-button class="facebook-button"></Facebook-button>
+            
             <EmailInput></EmailInput>
             <PasswordInput></PasswordInput>
             <div class="buttons-wrapper">
-                <RegisterButtonBlack href="index.html"></RegisterButtonBlack>
-                <SignInButtonGreen class="SignInButtonGreen"></SignInButtonGreen>
+                  <RegisterButtonBlack href="/register"></RegisterButtonBlack>
+                   <SignInButtonGreen class="SignInButtonGreen"></SignInButtonGreen>
+              </div>
+               <div class="terms-wrapper">
+                <p>
+                    <a href="https://support.wedio.com/en/articles/3491417-terms-and-conditions" target="blank" class="terms-link">PASSWORD RECOVERY</a>
+                </p>
             </div>
-            <div class="terms-wrapper">
-                <a href="https://support.wedio.com/en/articles/3491417-terms-and-conditions" target="blank" class="terms-link">PASSWORD RECOVERY</a> 
-            </div>
-
             </form>
     </div>
 
@@ -26,8 +28,10 @@
 export default {
     data: function() {
         return{
-            // status: 'Critical'
         }
+    },
+    mounted(){
+        document.title = 'Register on Wedio — Become a Part of Community For Free'
     }
 }
 </script>
@@ -51,7 +55,7 @@ export default {
 }
 .header-title{
 width: max-content;
-font-size: 30px;
+font-size: 28px;
 margin-bottom: 12px;
 font-weight: 900;
 
@@ -72,9 +76,10 @@ font-weight: 900;
     margin-bottom: 32px;
 }
 .terms-wrapper{
-        margin-bottom: 30px;
+            margin-top: 28px;
 }
 .terms-link{
+    
         font-size: inherit;
     color: #fff;
     font-weight: 600;
@@ -89,6 +94,7 @@ font-weight: 900;
 }
 
 .buttons-wrapper{
+    margin-top: 20px;
 display: flex;
 flex-direction:row;
 
@@ -114,6 +120,7 @@ flex-direction:row;
 }
 @media screen and (max-width: 480px){
 .form-wrapper{
+    margin-top:30px;
     width: 80%;
     
 }
@@ -126,7 +133,5 @@ flex-direction:row;
 }
 
 }
-
-
 
 </style>

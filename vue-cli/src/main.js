@@ -9,6 +9,7 @@ import RegisterWithFacebook from './components/buttons/RegisterWithFacebook.vue'
 import EmialInput from './components/inputs/EmailInput.vue'
 import UsernameInput from './components/inputs/UsernameInput.vue'
 import PasswordInput from './components/inputs/PasswordInput.vue'
+import ExitButton from './components/buttons/ExitButton.vue'
 
 import Registration from './components/banner/Registration.vue'
 import SignIn from './components/banner/SignIn.vue'
@@ -22,27 +23,32 @@ Vue.component('EmailInput', EmialInput);
 Vue.component('UsernameInput', UsernameInput);
 Vue.component('PasswordInput', PasswordInput);
 
-
-
 //Buttons
 Vue.component('RegisterButtonGreen',RegButtonGreen);
-Vue.component('SignInButtonGreen',SignInButtonGreen)
+Vue.component('SignInButtonGreen',SignInButtonGreen);
 Vue.component('RegisterButtonBlack',RegButtonBlack);
-Vue.component('SignInButtonBlack',SignInButtonBlack)
+Vue.component('SignInButtonBlack',SignInButtonBlack);
 
-Vue.component('Facebook-button', RegisterWithFacebook)
+Vue.component('ExitButton',ExitButton);
+Vue.component('Facebook-button', RegisterWithFacebook);
 //Test Example 
 Vue.component('app-server-status', Home);
 
 
+const routes = {
+  '/': SignIn,
+  '/register': Registration
+}
 
 new Vue({
   el: '#app',
-  render: h => h(App)
-})
-
-
-new Vue({
-  el: '#app2',
-  render: h => h(SignIn)
+  data: {
+    currentRoute: window.location.pathname
+  },
+  computed: {
+    ViewComponent () {
+      return routes[this.currentRoute] || NotFound
+    }
+  },
+  render (h) { return h(this.ViewComponent) }
 })
