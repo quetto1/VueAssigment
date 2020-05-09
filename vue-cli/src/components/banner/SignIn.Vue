@@ -111,6 +111,9 @@ flex-direction:row;
         text-align: center;
         flex-direction:column;
     }
+    .terms-wrapper{
+            text-align:center;
+}
 .SignInButtonGreen {
     margin-left: 0px;
     margin-top: 24px;
